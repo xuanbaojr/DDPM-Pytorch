@@ -1,18 +1,12 @@
 import torch
 import yaml
 import argparse
+import os
 import numpy as np
 from tqdm import tqdm
 from torch.optim import Adam
 from dataset.mnist_dataset import MnistDataset
 from torch.utils.data import DataLoader
-
-import sys
-import os
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..')))
-
-from dataset.mnist_dataset import MnistDataset
-
 from models.unet_base import Unet
 from scheduler.linear_noise_scheduler import LinearNoiseScheduler
 
